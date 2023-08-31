@@ -42,7 +42,7 @@ function App() {
       secondaryColor: "#FA993C"
     },
     {
-      id: 4,
+      id: 5,
       name: "Laser",
       primaryColor: "#F24405",
       secondaryColor: "#F2622E"
@@ -53,7 +53,6 @@ function App() {
     <div>
       <Banner />
       <Form onSubmit={task => handleSubmit(task)} placeList={places}/>
-      <Place primaryColor="" secondaryColor="" title=""/>
       {
         places.filter((place) => place.id > 0).map(
           place => 
@@ -62,9 +61,10 @@ function App() {
               primaryColor={place.primaryColor} 
               secondaryColor={place.secondaryColor} 
               title={place.name}
+              tasks={tasks.filter(task => task.executeTask === place.name)}
             />
           )
-        }
+      }
     </div>
   );
 }

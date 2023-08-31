@@ -15,11 +15,11 @@ const Form = (props) => {
   const onSubmit = (event) => {
     event.preventDefault();
     props.onSubmit({
-      tarefa: taskName,
-      descricao: taskDescription,
-      data: date,
-      imagem: image,
-      executarTarefa: executeTask
+      taskName,
+      taskDescription,
+      date,
+      image,
+      executeTask
     });
   };
 

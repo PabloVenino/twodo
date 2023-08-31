@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Banner from './components/Banner/Banner.js';
 import Form from './components/Form'
 import { Place } from './components/Place/index.js';
+import { Footer } from './components/Footer/index.js';
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -65,6 +66,7 @@ function App() {
             />
           )
       }
+      <Footer />
     </div>
   );
 }
